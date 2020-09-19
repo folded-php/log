@@ -1,0 +1,44 @@
+{
+    "name": "folded/log",
+    "description": "Log into files and various channels for your web app.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khalyomede",
+            "email": "khalyomede@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.0",
+        "phpunit/phpunit": "9.*",
+        "pestphp/pest": "0.3.*",
+        "friendsofphp/php-cs-fixer": "2.*",
+        "monolog/monolog": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Folded\\": "src"
+        },
+        "files": [
+            "src/addAlertLog.php",
+            "src/addCriticalLog.php",
+            "src/addDebugLog.php",
+            "src/addEmergencyLog.php",
+            "src/addErrorLog.php",
+            "src/addInfoLog.php",
+            "src/addLog.php",
+            "src/addLogger.php",
+            "src/addLoggerChannel.php",
+            "src/addNoticeLog.php",
+            "src/addWarningLog.php",
+            "src/channels.php",
+            "src/severities.php"
+        ]
+    },
+    "scripts": {
+        "test": "pest --coverage",
+        "lint": "php-cs-fixer --allow-risky=yes fix"
+    }
+}
