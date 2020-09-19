@@ -1,6 +1,6 @@
-# folded/action
+# folded/log
 
-A pattern to organize your controllers with functions for you web app.
+Log information to various channels for your web app.
 
 ## Summary
 

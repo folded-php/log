@@ -1,6 +1,6 @@
 {
     "name": "folded/log",
-    "description": "Log into files and various channels for your web app.",
+    "description": "Log information to various channels for your web app.",
     "type": "library",
     "license": "MIT",
     "authors": [
