@@ -2,6 +2,8 @@
 
 Log information to various channels for your web app.
 
+[![Packagist License](https://img.shields.io/packagist/l/folded/log)](https://github.com/folded-php/log/blob/master/LICENSE) [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/folded/log)](https://github.com/folded-php/log/blob/master/composer.json#L14) [![Packagist Version](https://img.shields.io/packagist/v/folded/log)](https://packagist.org/packages/folded/log) [![Build Status](https://travis-ci.com/folded-php/log.svg?branch=master)](https://travis-ci.com/folded-php/log) [![Maintainability](https://api.codeclimate.com/v1/badges/e24be0ab29a9b4119765/maintainability)](https://codeclimate.com/github/folded-php/log/maintainability) [![TODOs](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/folded-php/log)](https://www.tickgit.com/browse?repo=github.com/folded-php/log)
+
 ## Summary
 
 - [About](#about)
