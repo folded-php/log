@@ -196,3 +196,4 @@ This is very powerful when this library will be able to provide with different k
 |        | 7.3 | 7.4 | 8.0 |
 | ------ | --- | --- | --- |
 | v0.1.0 | ❌  | ✔️  | ❓  |
+| v0.1.1 | ❌  | ✔️  | ❓  |
