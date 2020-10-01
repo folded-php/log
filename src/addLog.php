@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addLog")) {
+if (!function_exists("Folded\addLog")) {
     /**
      * Logs an message of the desired severity.
      *

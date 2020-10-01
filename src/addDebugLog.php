@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addDebugLog")) {
+if (!function_exists("Folded\addDebugLog")) {
     /**
      * Logs a debug message.
      *

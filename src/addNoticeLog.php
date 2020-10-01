@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addNoticeLog")) {
+if (!function_exists("Folded\addNoticeLog")) {
     /**
      * Logs a notice.
      *

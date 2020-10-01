@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addAlertLog")) {
+if (!function_exists("Folded\addAlertLog")) {
     /**
      * Logs an alert.
      *

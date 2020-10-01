@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addInfoLog")) {
+if (!function_exists("Folded\addInfoLog")) {
     /**
      * Logs an info message.
      *
