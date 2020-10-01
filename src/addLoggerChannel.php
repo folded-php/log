@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addLoggerChannel")) {
+if (!function_exists("Folded\addLoggerChannel")) {
     /**
      * Add a channel to write by the logger.
      *

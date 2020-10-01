@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addErrorLog")) {
+if (!function_exists("Folded\addErrorLog")) {
     /**
      * Logs an error message.
      *

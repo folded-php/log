@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addCriticalLog")) {
+if (!function_exists("Folded\addCriticalLog")) {
     /**
      * Logs a critical message.
      *

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addLogger")) {
+if (!function_exists("Folded\addLogger")) {
     /**
      * Registers a new logger.
      * If the last two parameters are specified, will also triggers an addLoggerChannel method.

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("addEmergencyLog")) {
+if (!function_exists("Folded\addEmergencyLog")) {
     /**
      * Logs an emergency message.
      *
