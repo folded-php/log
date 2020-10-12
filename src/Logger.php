@@ -13,7 +13,7 @@ use Monolog\Logger as MonologLogger;
  *
  * @since 0.1.0
  */
-class Logger
+final class Logger
 {
     /**
      * The current logger that is being processed.
