@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
+use RuntimeException;
 use InvalidArgumentException;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger as MonologLogger;
@@ -25,6 +26,8 @@ final class Logger
     /**
      * Stores all the registered loggers (each logger is an instance of MonologLogger).
      *
+     * @var array<\Monolog\Logger>
+     *
      * @since 0.1.0
      */
     private static array $loggers = [];
@@ -33,8 +36,8 @@ final class Logger
      * Registers a new logger.
      * If the last two parameters are specified, will also triggers an addChannel method.
      *
-     * @param string $name       The name to uniquely identify the logger.
-     * @param array  $parameters The parameters for the channel (default: null).
+     * @param string       $name       The name to uniquely identify the logger.
+     * @param array<mixed> $parameters The parameters for the channel (default: null).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      * @throws InvalidArgumentException If the channel is not supported.
@@ -58,9 +61,9 @@ final class Logger
     /**
      * Logs an alert.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -77,9 +80,9 @@ final class Logger
     /**
      * Add a channel to write by the logger.
      *
-     * @param string $loggerName The name of the logger to add the channel on.
-     * @param string $channel    The type of channel (allowed: "file").
-     * @param array  $parameters The parameters for the channel.
+     * @param string       $loggerName The name of the logger to add the channel on.
+     * @param string       $channel    The type of channel (allowed: "file").
+     * @param array<mixed> $parameters The parameters for the channel.
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      * @throws InvalidArgumentException If the channel is not supported.
@@ -107,9 +110,9 @@ final class Logger
     /**
      * Logs a critical message.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -126,9 +129,9 @@ final class Logger
     /**
      * Logs a debug message.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -145,9 +148,9 @@ final class Logger
     /**
      * Logs an emergency message.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -164,9 +167,9 @@ final class Logger
     /**
      * Logs an error message.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -183,9 +186,9 @@ final class Logger
     /**
      * Logs an info message.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -202,10 +205,10 @@ final class Logger
     /**
      * Logs an message of the desired severity.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $severity   The severity to use ("alert", "critical", "debug", "emergency", "error", "info", "notice", "warning").
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $severity   The severity to use ("alert", "critical", "debug", "emergency", "error", "info", "notice", "warning").
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      * @throws InvalidArgumentException If the severity is not supported.
@@ -227,9 +230,9 @@ final class Logger
     /**
      * Logs a notice.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -246,9 +249,9 @@ final class Logger
     /**
      * Logs a warning.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
@@ -280,7 +283,9 @@ final class Logger
     /**
      * Adds a file channel to the current logger.
      *
-     * @param array $parameters The parameters for the file channel.
+     * @param array<mixed> $parameters The parameters for the file channel.
+     *
+     * @throws RuntimeException If the monolog handler has not been instanciated yet.
      *
      * @since 0.1.0
      *
@@ -292,6 +297,10 @@ final class Logger
     private static function addFileChannel(array $parameters): void
     {
         $path = $parameters["path"];
+
+        if (!(self::$currentLogger instanceof MonologLogger)) {
+            throw new RuntimeException("Monolog logger not instanciated");
+        }
 
         self::$currentLogger->pushHandler(new StreamHandler($path));
     }

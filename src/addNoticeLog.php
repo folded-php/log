@@ -4,13 +4,15 @@ declare(strict_types = 1);
 
 namespace Folded;
 
+use InvalidArgumentException;
+
 if (!function_exists("Folded\addNoticeLog")) {
     /**
      * Logs a notice.
      *
-     * @param string $loggerName The name of the logger to use.
-     * @param string $message    The message to log.
-     * @param array  $context    The parameters to add (default: []).
+     * @param string       $loggerName The name of the logger to use.
+     * @param string       $message    The message to log.
+     * @param array<mixed> $context    The parameters to add (default: []).
      *
      * @throws InvalidArgumentException If the logger has not be registered yet.
      *
